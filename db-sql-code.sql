@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS public.inventory
     CONSTRAINT inventory_pkey PRIMARY KEY (inv_id)
 );
 
--- Create the relationship between classification and inventory
+-- classification and inventory
 ALTER TABLE IF EXISTS public.inventory
     ADD CONSTRAINT fk_classification FOREIGN KEY (classification_id)
     REFERENCES public.classification (classification_id)
